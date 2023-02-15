@@ -6,6 +6,7 @@ public class Pizza {
     private Boolean isVeg;
     private String bill;
     private boolean cheeseAdded, toppingsAdded, paperBag;
+    private boolean isBillCreated;
     private String cheese, toppings, paper;
 
     public Pizza(Boolean isVeg){
@@ -56,10 +57,12 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
+        if(isBillCreated) {return "";}
+
         if(cheeseAdded) bill += cheese;
         if(toppingsAdded) bill += toppings;
         if(paperBag) bill += paper;
-        bill += "Total Price: " + getPrice();
+        bill += "Total Price: " + getPrice() + "\n";
 
         return this.bill;
     }
