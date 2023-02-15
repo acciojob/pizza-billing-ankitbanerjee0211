@@ -12,7 +12,7 @@ public class Pizza {
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         // your code goes here
-        bill = "Base Price Of The Pizza: " + ((isVeg)?"300\n":"400\n");
+        bill = "Base Price Of The Pizza: " + ((isVeg)?"300":"400") + "\n";
         price += (isVeg)?300:400;
         cheese = "";
         toppings = "";
@@ -62,7 +62,7 @@ public class Pizza {
         if(cheeseAdded) bill += cheese;
         if(toppingsAdded) bill += toppings;
         if(paperBag) bill += paper;
-        bill += "Total Price: " + getPrice();
+        bill += "Total Price: " + getPrice() + "\n";
         isBillCreated = true;
 
         return this.bill;
