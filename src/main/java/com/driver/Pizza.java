@@ -62,7 +62,7 @@ public class Pizza {
         if(cheeseAdded) bill += cheese;
         if(toppingsAdded) bill += toppings;
         if(paperBag) bill += paper;
-        bill += "Total Price: " + getPrice() + "\n";
+        bill += "Total Price: " + getPrice();
         isBillCreated = true;
 
         return this.bill;
